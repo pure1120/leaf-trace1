@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Residual Growth</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- MediaPipe -->
+    <script src="https://unpkg.com/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://unpkg.com/@mediapipe/hands/hands.js"></script>
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: rgb(248, 245, 238);
+        font-family: Arial, sans-serif;
+      }
+
+      canvas {
+        display: block;
+      }
+
+      #info {
+        position: fixed;
+        left: 16px;
+        top: 14px;
+        color: rgba(47, 64, 64, 0.8);
+        font-size: 13px;
+        letter-spacing: 0.02em;
+        z-index: 10;
+        pointer-events: none;
+      }
+
+      #video {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="info">connecting...</div>
+    <video id="video" playsinline></video>
+    <script src="sketch.js"></script>
+  </body>
+</html>
